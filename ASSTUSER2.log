@@ -1,0 +1,49 @@
+====== compile.log ======
+rm -f main.o map.o a.out
+gcc -g -c -Wall main.c
+gcc -g -c -Wall map.c
+gcc -g main.o map.o -o a.out -pthread
+rm -f assignment.o orderme.o a.out
+gcc -g -c -Wall assignment.c
+assignment.c: In function 'consume_enter':
+assignment.c:8:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+     printf("entered consume_enter");
+     ^~~~~~
+assignment.c:8:5: warning: incompatible implicit declaration of built-in function 'printf'
+assignment.c:8:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+assignment.c: In function 'consume_exit':
+assignment.c:26:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("entered consume_exit");
+     ^~~~~~
+assignment.c:26:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+assignment.c: In function 'produce_enter':
+assignment.c:39:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("entered produce_enter");
+     ^~~~~~
+assignment.c:39:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+assignment.c: In function 'produce_exit':
+assignment.c:51:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("entered produce_exit");
+     ^~~~~~
+assignment.c:51:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+gcc -g -c -Wall orderme.c
+gcc -g assignment.o orderme.o -o a.out -pthread
+====== test_public.log ======
+>SPLIT<
+>TEST=a2q1.py<
+>Program Output<
+Test: article (20), seed (47), thread (4) passes
+Test: article (20), seed (99), thread (8) passes
+Test: article (30), seed (93), thread (4) passes
+Test: article (30), seed (60), thread (8) passes
+Test: article (40), seed (48), thread (4) passes
+Test: article (40), seed (89), thread (8) passes
+Total Score is as follows: 6/6
+>SPLIT<
+>TEST=a2q2.py<
+>Program Output<
+Test: consumers (10), producers (5), ratio (4) passes
+Test: consumers (10), producers (10), ratio (4) passes
+Test: consumers (20), producers (5), ratio (4) passes
+Test: consumers (20), producers (10), ratio (4) passes
+Total Score is as follows: 6/6

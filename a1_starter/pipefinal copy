@@ -1,0 +1,1 @@
+cat /assignments/ASSTUSER1/sampletxt | grep touch | grep txt > output.txt

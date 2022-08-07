@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "git pushing"
+git add *
+git commit -m 

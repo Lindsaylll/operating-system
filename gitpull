@@ -1,0 +1,5 @@
+#!/usr/bin/expect -f
+git pull
+send  x645liu
+send Ua6aMjP9ZUX6fYW1gBWr
+

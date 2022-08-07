@@ -1,0 +1,1 @@
+grep touch > output.txt < /assignments/ASSTUSER1/sampletxt
