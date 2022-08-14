@@ -1,7 +1,0 @@
-This is CS350 Docker container repository. It includes the CS350 Docker 
-container and the tools to build, run, debug and test OS/161 and Linux
-based programming assignments for CS350. This repository currently expects that you are 
-touchtxt
-running in a UNIX or UNIX-like environment that supports docker, such as, MacOS, Linux or Windows WSL. 
-txt
-
